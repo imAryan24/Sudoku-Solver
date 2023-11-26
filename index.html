@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Solve any Sudoku Puzzles . AnySudokuSolver is an Online automatic Sudoku Solver. Just enter the digits in Sudoku board and get the solution instantly">
+
+    <meta name="Keywords" content="Sudoku, Sudoku solver, solve sudoku online, any sudoku solver, Play Sudoku, Sudoku Solution,sudoku puzzles solver, online sudoku, free sudoku,sudoku, 9X9 , solve, Sudoku board, board games ">
+
+    <title>Sudoku Solver </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon (2).ico">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <meta name="google-site-verification" content="YWUkup4p3Ak4uoeI4gdjy3UTcrEL3TNbBCCA2JaaGqg" />
+</head>
+
+<body class="bg-success">
+
+    <nav class="navbar navbar-default navbar-static-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="title-page"> Sudoku Solver </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="sudoku-tips.html" target="_blank" class="navigation"> Sudoku Tips </a> </li>
+                    <li><a href="about.html" target="_blank" class="navigation">About</a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
+        <div class="col-md-6 col-md-offset-4" style="padding-left: 0px;">
+            <h1 class="heading"><strong> Sudoku Solver </strong></h1>
+        </div>
+
+        <div class="table-responsive col-md-6 col-md-offset-4">
+
+            <form class="board" autocomplete="off">
+                <table>
+                    <tbody>
+                        <thead>
+                            Fill in the 9X9 grid with digits from 1 to 9
+                        </thead>
+
+                        <tr>
+                            <td>
+                                <input class="c v h bg-info" id="c11" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c12" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info" id="c13" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c14" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c15" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h" id="c16" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info " id="c17" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c18" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info " id="c19" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v h" id="c21" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c22" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h" id="c23" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c24" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c25" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info" id="c26" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c27" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c28" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h" id="c29" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v bg-info " id="c31" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  " id="c32" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   bg-info " id="c33" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  " id="c34" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v bg-info " id="c35" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c    " id="c36" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v bg-info" id="c37" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  " id="c38" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   bg-info " id="c39" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v h" id="c41" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c42" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h" id="c43" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info " id="c44" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c45" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info " id="c46" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c47" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info " id="c48" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h" id="c49" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v h bg-info " id="c51" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c52" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info " id="c53" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h" id="c54" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info " id="c55" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h" id="c56" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info " id="c57" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h " id="c58" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info " id="c59" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v  " id="c61" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v bg-info " id="c62" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c    " id="c63" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  bg-info" id="c64" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  " id="c65" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   bg-info " id="c66" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  " id="c67" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v bg-info " id="c68" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c    " id="c69" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v h bg-info" id="c71" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h  " id="c72" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info " id="c73" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h  " id="c74" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c75" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h  " id="c76" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c77" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h  " id="c78" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info" id="c79" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v h " id="c81" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info " id="c82" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h " id="c83" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c84" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h  " id="c85" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h bg-info" id="c86" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h " id="c87" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v h bg-info" id="c88" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   h " id="c89" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="c v bg-info " id="c91" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v  " id="c92" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c bg-info   " id="c93" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v " id="c94" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v bg-info " id="c95" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   " id="c96" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v bg-info " id="c97" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c v " id="c98" maxlength="1" autocomplete="off" />
+                            </td>
+                            <td>
+                                <input class="c   bg-info " id="c99" maxlength="1" autocomplete="off" />
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <td style="padding-top:10px; padding-bottom: 10px" align="center" colspan="9">
+                            <input class="btn btn-primary  btn-lg " type="reset" style= "padding-top:10px"; />
+                            <input class="btn btn-success  btn-lg " type="button" value="Solve" onclick="javascript:solve()" />
+                            
+                        </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="9" id="message">
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </form>
+
+        </div>
+    </div>
+    
+  
+
+    <div class="container panel panel-default panel-body">
+        <h2> About Sudoku puzzle game and how to play? </h2>
+        <p><strong>Sudoku</strong> is one of the most popular logic-based number-placement puzzle game. The literal meaning of "Su-doku" in Japanese is "the number that is single".
+        </p>
+        <p>The objective is to fill a nine-by-nine (9x9) grid with digits so that each row, column and 3x3 section contain number between 1 and 9, with each number used once and only once in each section. The Sudoku game players are provided with partially filled grid meant to be solved.
+        </p>
+        <p>To solve sudoku one doesn't require the knowledge of mathematics but require the logic and reasoning. Solving Sudoku Puzzles daily helps with your brain. It improves the concentration and logical thinking. One can look for sudoku puzzles given in Newspapers or can play them online provided by many websites.
+        </p>
+
+        <p>
+            <a href="https://en.wikipedia.org/wiki/Sudoku"> Know more </a>
+        </p>
+
+        <h2> About Sudoku Solver </h2>
+        <p>
+            This website is a free online automatic sudoku solver that solves almost any sudoku puzzle in matter of second. It applies Javascript, Brute Force method and Dancing Links Algorithm for quick solution. Ever tried but stucked on sudoku puzzles given in newspapers, magazines and online. You can use this website to get its solution instantly and move further. Do not use this sudoku solver tool without giving your best effort while solving the puzzle.
+        </p>
+
+        <h2> How 9x9 sudoku solver works </h2>
+
+        <p>
+            The goal is to just fill the empty cells with the already known numbers according to the Sudoku rules or exactly as given in your puzzle that you want to solve.You must give the correct input, i.e only numbers between 1 to 9 and use the number once and only once in each row, column and 3x3 grid section. See *Fig-1.
+        </p>
+        <p>Next, click on <strong>"Solve"</strong> button to get the answer instantly. Note, more than on solution may be possible. See *Fig-2.
+        </p>
+
+        <div class="col-sm-4 col-sm-offset-2">
+
+            <img src="images/Sudoku-Solving.png" class="img-responsive img-thumbnail" alt="Sudoku Solving, Enter the number in each cell" />
+            <div>
+                <p>Fig-1: Enter known numbers in the cell.</p>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4 ">
+
+            <img src="images/Sudoku-Solved.png" class="img-responsive img-thumbnail" alt="Sudoku Solved,get the result ">
+            <div>
+                <p>Fig-2: click on "solve" button to get it solved</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer container panel panel-default panel-body">
+        <p>  by Aryan Adarsh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:send.aryan6000@gmail.com?subject=About SudokuSolver"> Contact </a>
+            <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+        </p>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+body {
+font-size : 16px;
+}
+
+.logo { 
+    width:200px;
+    height:50px;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+a.title-page {
+    font-size: 50px;
+}
+
+a{
+    color: white !important;
+}
+
+.navbar-default{
+    background-color: black;
+}
+
+.heading{
+    padding-top: 15px;
+    padding-left: 45px;
+}
+
+.navigation{
+    margin-top: 10px;
+    font-size: 25px;
+    color: wheat !important;
+}
+
+.navigation:hover{
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+.bg-success{
+    background-color: #a3d8f4;
+}
+
+.board{
+    padding-left: 45px;
+}
+
+.board input.c {
+            font-size: 15pt;
+            text-align: center;
+	
+        }
+
+.c {
+    border: 1px black solid;
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.v {
+	border: 1px black solid;
+}
+
+.h {
+	border: 1px black solid;
+}
+
+.footer{
+    text-align: center;
+    background-color: black;
+    color: wheat;
+}
+
+.contact-me{
+    color: black !important;
+}
+
+
+
+#message{
+	color: red;
+}
+
+#c93, #c83, #c73, #c63, #c53, #c43, #c33, #c23, #c13,#c96, #c86, #c76, #c66, #c56, #c46, #c36, #c26, #c16{
+	border-right: 4px solid black;
+}    
+
+#c31,#c32,#c33,#c34,#c35,#c36,#c37,#c38,#c39, #c61,#c62,#c63,#c64,#c65,#c66,#c67,#c68,#c69  {
+        border-bottom: 4px solid black;
+}
+
+#sudoku-board {
+    border: 2px solid black;
+}
+
+#sudoku-board td {
+    padding: 0px;
+    margin: 0px;
+}
+
+#sudoku-board input.square {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    width: 45px;
+    height: 38px;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#sudoku-board .border-right {
+    border-right: 2px solid black;
+}
+
+#sudoku-board .border-bottom {
+    border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 500px) {
+
+#sudoku-board input.square {
+    display: block;
+    margin-bottom:0px;
+    width: 28px;
+    height: 26px;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid black;
+}
+   
+}
